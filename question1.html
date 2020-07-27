@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8'/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Mike Tyson</title>
+   
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" 
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel='stylesheet' href="fightMain.css">
+    <link rel='stylesheet' href="question.css">
+    <link href="https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap" rel="stylesheet">
+    <!--This needs to be changed to the URL of the actual site-->
+    <meta property="og:url"           content=" https://davidswanson297.github.io/TheFightSport/" />
+    <meta property="og:type"          content="website" />
+    <meta property="og:title"         content="The Fight Sport" />
+    <meta property="og:description"   content="Martial arts quiz" />
+    <meta property="og:image"         content=" https://davidswanson297.github.io/TheFightSport/" />
+  </head>
+<body>
+  <h1 class="grow"><a href="fightMain.html"><u>The Fight Sport</u></a></h1>
+<div class="column">
+<p class="question_"><strong>Mike Tyson bit off an ear.<br>Whos was it?</strong></p>
+<p id="wrong" class="display"></p> <p id="correct" class="display"></p> 
+<img src="tyson.jpg" alt="tyson flexing">
+
+<div class="answers">
+<button type="button" class="btn btn-lg" id="answer1" onclick="myFunction()">Charlie Sheen</button>
+<button type="button" class="btn btn-lg" id="correctAnswer" onclick="myFunctionRight()">Evander Holyfield</button>
+<button type="button" class="btn btn-lg" id="answer3" onclick="myFunction()">Lennox Lewis</button>
+<button type="button" class="btn btn-lg" id="answer" onclick="myFunction()">Rodney Dangerfield</button>
+</div>
+<a href="question2.html"><button class="btn btn-lg" id="myBtn" disabled>Next</button></a>
+
+<!--need to change this to the URL for the actual site-->
+<div class="fb-share-button" 
+data-href=" https://davidswanson297.github.io/TheFightSport/" 
+data-layout="button_count">
+
+</div>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+var js, fjs = d.getElementsByTagName(s)[0];
+if (d.getElementById(id)) return;
+js = d.createElement(s); js.id = id;
+js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+function myFunction() {
+   document.getElementById("myBtn").disabled = false;
+   document.getElementById("wrong").innerHTML = "WRONG!";
+   document.getElementById("answer").disabled = true;
+   document.getElementById("answer1").disabled = true;
+   document.getElementById("correctAnswer").disabled = true;
+   document.getElementById("answer3").disabled = true;
+};
+
+function myFunctionRight() {
+   document.getElementById("myBtn").disabled = false;
+   document.getElementById("correct").innerHTML = "CORRECT!";
+   document.getElementById("answer").disabled = true;
+   document.getElementById("answer1").disabled = true;
+   document.getElementById("correctAnswer").disabled = true;
+   document.getElementById("answer3").disabled = true;
+   myStopFunction();
+   createItem();
+};
+
+function createItem() {
+  sessionStorage.setItem("1st", 1);
+}
+
+window.onload = function(){
+   myVar = setTimeout(loadAfterTime, 7000)
+};
+function myStopFunction() {
+  clearTimeout(myVar);
+}
+function loadAfterTime() { 
+  document.getElementById("wrong").innerHTML = "WRONG!";
+  document.getElementById("myBtn").disabled = false;
+  document.getElementById("answer").disabled = true;
+  document.getElementById("answer1").disabled = true;
+   document.getElementById("correctAnswer").disabled = true;
+   document.getElementById("answer3").disabled = true;
+// code you need to execute goes here. 
+}
+</script>
+
+</body>
+</html>

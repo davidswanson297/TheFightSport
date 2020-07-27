@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.question_ {
+  width: 100%;
+  background-color:rgba(169,169,169, .7);
+  align-items: center;
+  margin-top: -10px;
+}
+.btn {
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+img {
+max-width: 100%;
+box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+margin-top: -40px;
+
+.btn:active {
+  color: green;
+}
+]
+}
+
+.picColumn {
+  display: flex;
+  flex-direction: column;
+}
+.answers {
+  margin-top: 20px;
+  margin-bottom: 60px;
+}
+.fb-share-button {
+  margin-top: 10px;
+}
+
+#wrong {
+  font-size: 100px;
+  color: red;
+}
+
+#correct {
+  font-size: 100px;
+  color: green;
+  margin-top: -20px;
+}
+:disabled {
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+}
+#finalTally {
+  font-size: 48px;
+  color: orange;
+  }
+@media only screen and (min-width: 1051px) {
+  #correct {
+    font-size: 300px;
+    color: green;
+  }
+  #wrong {
+    font-size: 300px;
+    color: red;
+  }
+}
+/* Tablet Styles */
+@media only screen and (min-width: 401px) and (max-width: 1050px) {
+
+ 
+  .answers {
+   display: flex;
+margin-top: 60px;
+margin-bottom: 60px;
+flex-wrap: wrap;
+justify-content: center;
+ }
+ #wrong {
+  font-size: 80px;
+  color: red;
+}
+
+#correct {
+  font-size: 80px;
+  color: green;
+ 
+}
+}
+
+/* Mobile Styles */
+@media only screen and (max-width: 400px) {
+  img {
+    width: 200px;
+    height: 200px;
+  }
+  .btn {
+    
+    margin-top: 5px;
+  }
+  .answers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  #myBtn {
+    margin-top: -50px;
+  }
+  #wrong {
+    font-size: 70px;
+    color: red;
+  }
+  
+  #correct {
+    font-size: 70px;
+    color: green;
+   
+  }
+}
